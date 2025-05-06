@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    min-height: 100vh;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 20px 40px;
+    border-bottom: 2px solid red;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+  }
+  .navbar a:hover {
+    color: red;
+  }
+  .navbar a.active {
+    background-color: red;
+    color: #fff;
+  }
+  main {
+    padding-top: 100px;
+  }
+  .section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    scroll-snap-align: start;
+    opacity: 0.6;
+    transform: scale(1);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  }
+  .section.scale-up {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  h1, h2 {
+    color: red;
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  /* Продукти */
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .product-card {
+    background-color: #222;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  .product-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  .product-card h3 {
+    color: red;
+    margin-bottom: 10px;
+  }
+  .product-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: darkred;
+  }
+  
+  /* Таблиця */
+  .price-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    margin-bottom: 20px;
+  }
+  .price-table thead {
+    background-color: #555;
+    color: #fff;
+  }
+  .price-table th,
+  .price-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+  }
+  .price-table tbody tr {
+    background-color: #333;
+    color: #fff;
+  }
+  .price-table td:not(:first-child) {
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Анімація */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .content-wrapper {
+    max-width: 800px;
+    width: 100%;
+  }
+ 
+  /* Initially hide the navbar on smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hidden by default */
+        width: 100%;
+        background-color: #000;
+        position: absolute;
+        top: 60px; /* Adjust if needed */
+        left: 0;
+        padding: 20px;
+        border-bottom: 2px solid red;
+    }
+
+    .burger {
+        display: block; /* Make sure burger icon is visible */
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+    }
+
+    .navbar.active {
+        display: block; /* Display navbar when active */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* DRUK STYLE PHOTO */
+.druk-card {
+    padding: 20px;
+    width: 100%; /* Розширюємо контейнер на всю доступну ширину */
+    max-width: 900px; /* Обмежуємо максимальну ширину контейнера */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Вирівнює зображення ліворуч */
+    align-items: flex-start; /* Вирівнює по верху */
+    gap: 10px; /* Простір між зображеннями */
+    margin: 0 auto;
+}
+
+.druk-card img {
+    width: calc(50% - 10px); /* Зображення займає 50% ширини мінус проміжок */
+    border-radius: 5px;
+    margin-bottom: 0; /* Прибираємо нижній відступ */
+    box-sizing: border-box; /* Враховуємо відступи в загальній ширині */
+}
+
+/* Стилі для мобільних пристроїв */
+@media (max-width: 767px) {
+    .druk-card {
+        width: 100%; /* Змінюємо ширину на 100% для мобільних */
+        padding: 10px; /* Зменшуємо відступи */
+    }
+
+    .druk-card img {
+        width: 100%; /* Зображення займає всю ширину на мобільних */
+        max-width: none; /* Забираємо обмеження по ширині */
+        margin-bottom: 10px; /* Додаємо відступ між зображеннями */
+    }
+
+    .druk-card {
+        flex-direction: column; /* Розташовуємо елементи по вертикалі на мобільних */
+        align-items: center; /* Центруємо елементи по вертикалі */
+    }
+}
+
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 16px;
+    margin-top: 60px;
+  }
+  
+  .footer-content a {
+    color: red;
+    text-decoration: none;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }

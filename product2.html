@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фігура кам’яного обличчя</title>
+  <link rel="icon" href="image/logo.webp" type="image/png">
+  <link rel="stylesheet" href="stylesproduct.css" />
+</head>
+<div class="contact-overlay" id="contactOverlay" onclick="closeContact()"></div>
+<div class="horizontal-contact" id="horizontalContact" onclick="openContact()">
+  Зв'язок
+</div>
+<div class="contact-bar" id="contactBar">
+  <div class="contact-content">
+    <div class="contact-header">
+      <span>Зв'язок</span>
+      <span class="close-btn" onclick="closeContact()">✖</span>
+    </div>
+    
+    <label>Email:</label>
+    <input type="email" id="email" value="orlovdmitriy14@gmail.com" readonly />
+    
+    <label>Повідомлення:</label>
+    <textarea id="message" placeholder="Введіть ваше повідомлення..."></textarea>
+    
+    <button onclick="sendMail()">Відправити</button>      
+  </div>
+</div>
+<body>
+  <header>
+    <div class="logo">Форма3D</div>
+  </header>
+  
+  <main>
+    <section class="section">
+      <div class="content-wrapper">
+        <div class="product-info">
+          <div class="product-image">
+            <img src="image/face.webp" alt="Фігура кам’яного обличчя" />
+          </div>
+          <div class="product-details">
+            <h1>Фігура кам’яного обличчя</h1>
+            <p>• Опис:
+                Ця фігура, стилізована під старовинну кам’яну скульптуру, стане чудовим елементом декору для вашого дому чи офісу. Її автентичний вигляд переносить нас у часи античних цивілізацій, а також додасть інтер’єру загадковості та інтелектуальної глибини. Може бути використана для фотозон, колекцій, або просто як розмовний елемент для вашої кімнати.</p>
+              <p>• Кому підходить:
+                Для любителів історії та культури.
+                Ідеально підходить для декору приміщень у стилі ретро чи класика.
+                Чудовий подарунок для колекціонерів старовинних предметів.</p>
+            <p>Ціна: 0 ГРН</p>
+            <a href="buyproduct2.html"><button>Купити</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>📧 Пошта: <a href="mailto:orlovdmitriy14@gmail.com">orlovdmitriy14@gmail.com</a></p>
+      <p>
+        📞 Телефон:
+        <a href="tel:0677772819">0677772819</a> |
+        <a href="tel:0737772821">0737772821</a>
+      </p>
+      <p>✈ Telegram: <a href="https://web.telegram.org/k/#@zippoziga">@zippoziga</a></p>
+      <p>📝 Маєш ідеї? <a href="#">Залишити відгук</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

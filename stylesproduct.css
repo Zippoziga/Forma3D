@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 20px 40px;
+    border-bottom: 2px solid red;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+  }
+  
+  main {
+    padding-top: 100px;
+  }
+  
+  .section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .product-image {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .product-image img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .product-details h1 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+  }
+  
+  .product-details p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    background-color: red;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: darkred;
+  }
+
+   /* LINE ZVYAZOK */
+   .horizontal-contact {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 100px 5px;
+    writing-mode: vertical-rl;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .contact-bar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: auto;
+    background: #222;
+    color: white;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.4s;
+    z-index: 1001;
+  }
+  
+  .contact-bar.active {
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .contact-content {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .contact-bar.active .contact-content {
+    opacity: 1;
+  }
+  
+  .contact-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .close-btn {
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .contact-content label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .contact-content input,
+  .contact-content textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-content button {
+    width: 100%;
+    padding: 10px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .horizontal-contact {
+      padding: 18px 8px;
+      font-size: 14px;
+      right: 0px;
+    }
+  }
+  .contact-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: none;
+  }
+  
+  .contact-overlay.active {
+    display: block;
+  }
+  
+  /* Stripe payment form styling */
+  #payment-form {
+    margin-top: 20px;
+  }
+  
+  #card-element {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Mobile adaptation */
+  @media (max-width: 767px) {
+    .logo {
+      font-size: 28px;
+    }
+  
+    header {
+      justify-content: center;
+      padding: 15px 20px;
+    }
+  
+    .product-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-image {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .product-details {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  
+  footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 16px;
+    margin-top: 60px;
+  }
+  
+  .footer-content a {
+    color: red;
+    text-decoration: none;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
