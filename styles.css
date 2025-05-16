@@ -314,6 +314,18 @@
     margin-bottom: 0; /* Прибираємо нижній відступ */
     box-sizing: border-box; /* Враховуємо відступи в загальній ширині */
 }
+.button-3d {
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button-3d:hover {
+  background-color: darkred;
+}
 
 /* Стилі для мобільних пристроїв */
 @media (max-width: 767px) {
